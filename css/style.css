@@ -21,9 +21,12 @@ body {
 }
 
 .wrapper {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   margin: 96px -15px;
 }
 
@@ -86,11 +89,13 @@ body {
 /*Splash */
 .splash {
   min-height: 1250px;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .splash img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   position: absolute;
   height: 1250px;
@@ -214,7 +219,8 @@ body {
 
 /* About us*/
 .about {
-  flex: 1 0 21%;
+  -ms-flex: 1 0 21%;
+      flex: 1 0 21%;
   margin: 10px;
   height: 100%;
 }
@@ -256,14 +262,16 @@ body {
 }
 
 .about-image {
-  flex: 0 50%;
+  -ms-flex: 0 50%;
+      flex: 0 50%;
   margin: 10px;
   text-align: left;
   position: relative;
 }
 
 .about-text {
-  flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
   margin: 10px;
   text-align: left;
   position: relative;
@@ -272,15 +280,18 @@ body {
 
 .about-image img {
   width: 90%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-image-two {
-  order: 2;
+  -ms-flex-order: 2;
+      order: 2;
 }
 
 .about-text-two {
-  order: 1;
+  -ms-flex-order: 1;
+      order: 1;
 }
 
 .btn-three {
@@ -311,7 +322,8 @@ body {
 }
 
 .about-ceo {
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   text-align: center;
   margin-top: 80px;
   opacity: 0;
@@ -328,7 +340,8 @@ body {
 
 .about-four img {
   border-radius: 75%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 150px;
   width: 150px;
   opacity: 0.5;
@@ -347,7 +360,8 @@ body {
 
 /* Our Successes */
 .icon {
-  flex: 1 0 21%;
+  -ms-flex: 1 0 21%;
+      flex: 1 0 21%;
   margin-bottom: 10px;
   height: 100%;
   text-align: center;
@@ -356,7 +370,8 @@ body {
 }
 
 .successes-text {
-  flex: 1 0 21%;
+  -ms-flex: 1 0 21%;
+      flex: 1 0 21%;
   height: 100%;
   max-width: 300px;
   text-align: left;
@@ -373,9 +388,12 @@ body {
 
 /* Gallery */
 .wrapper-gallery {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .wrapper-gallery > * {
@@ -387,9 +405,12 @@ body {
   height: 200px;
   overflow: hidden;
   position: relative;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .media img {
@@ -400,9 +421,12 @@ body {
 .layer {
   opacity: 0;
   position: absolute;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 10px;
   height: 90%;
   background: #fff;
@@ -439,7 +463,8 @@ body {
 }
 
 .donate-column {
-  flex: 1 0 21%;
+  -ms-flex: 1 0 21%;
+      flex: 1 0 21%;
   border: solid 2px;
   margin: 5px;
   border-radius: 2%;
@@ -514,7 +539,8 @@ body {
 }
 
 .location-text {
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   max-width: 60%;
 }
 
@@ -568,7 +594,8 @@ body {
 
 @media (min-width: 767) {
   .wrapper {
-    flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .fa-cat,
   .fa-dog,
@@ -580,7 +607,8 @@ body {
     margin: auto;
   }
   .about-image-two {
-    order: 1;
+    -ms-flex-order: 1;
+        order: 1;
   }
   .successes .section-subtitle {
     text-align: center;
@@ -622,3 +650,4 @@ body {
     right: 250px;
   }
 }
+/*# sourceMappingURL=style.css.map */
