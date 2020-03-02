@@ -60,6 +60,7 @@ body {
 .logo {
   font-family: $logo;
   text-align: left;
+  height: 0;
 }
 
 .span-color {
@@ -69,8 +70,7 @@ body {
 /* Navigation */
 
 .navigation {
-  padding: 10px 0;
-  height: 100px;
+  height: 55px;
 }
 
 .navigation ul {
@@ -101,6 +101,10 @@ body {
 .splash {
   min-height: 1250px;
   display: flex;
+  &:hover {
+    opacity: 0.9;
+    transition: $transition;
+  }
 }
 .splash img {
   object-fit: cover;
@@ -108,11 +112,6 @@ body {
   position: absolute;
   height: 1250px;
   z-index: -1;
-}
-
-.splash:hover {
-  opacity: 0.9;
-  transition: 2s all;
 }
 
 .splash-inner {
@@ -140,12 +139,12 @@ body {
 
 .splash:hover .page-subtitle {
   opacity: 1;
-  transition: 3s all;
+  transition: $transition;
 }
 
 .splash:hover .page-title {
   opacity: 1;
-  transition: 3s all;
+  transition: $transition;
 }
 
 /* Button Splash */
@@ -246,15 +245,11 @@ body {
   text-align: center;
   margin-left: 90px;
   margin-top: 60px;
-}
-
-.fa-cat:hover,
-.fa-dog:hover,
-.fa-horse:hover,
-.fa-paw:hover {
-  color: $span-color;
-  transition: 1s all;
-  cursor: pointer;
+  &:hover {
+    color: $span-color;
+    transition: 1s all;
+    cursor: pointer;
+  }
 }
 
 .btn-two {
@@ -264,33 +259,34 @@ body {
   background-color: $span-color;
 }
 
-.about-two {
+.companions-one {
   background-color: $section;
 }
 
-.about-image {
+.about-our-comapnions-image {
   flex: 0 50%;
   margin: 10px;
   text-align: left;
   position: relative;
+  img {
+    width: 90%;
+    object-fit: cover;
+  }
 }
 
-.about-text {
+.about-our-companions-text {
   flex: 0 0 50%;
-  margin: 10px;
+  margin: 10px 30px 0;
   text-align: left;
   position: relative;
   max-width: 400px;
 }
-.about-image img {
-  width: 90%;
-  object-fit: cover;
-}
-.about-image-two {
+
+.companions-image-two {
   order: 2;
 }
 
-.about-text-two {
+.companions-text-two {
   order: 1;
 }
 
@@ -301,13 +297,7 @@ body {
   opacity: 0;
 }
 
-.about-two:hover .btn-three {
-  opacity: 1;
-  transition: $transition;
-  background-color: $span-color;
-}
-
-.about-three:hover .btn-three {
+.about-our-companions:hover .btn-three {
   opacity: 1;
   transition: $transition;
   background-color: $span-color;
@@ -326,10 +316,9 @@ body {
   text-align: center;
   margin-top: 80px;
   opacity: 0;
-}
-
-.about-ceo p {
-  color: white;
+  p {
+    color: white;
+  }
 }
 
 .span-logo {
@@ -337,23 +326,22 @@ body {
   color: white;
 }
 
-.about-four img {
+.about-our-ceo img {
   border-radius: 75%;
   object-fit: cover;
   height: 150px;
   width: 150px;
   opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    transition: $transition;
+    cursor: pointer;
+  }
 }
 
-.about-four:hover .about-ceo {
-  opacity: 1;
-  transition: 3s all;
-}
-
-.about-four img:hover {
+.about-our-ceo:hover .about-ceo {
   opacity: 1;
   transition: $transition;
-  cursor: pointer;
 }
 
 /* Our Successes */
@@ -454,6 +442,22 @@ body {
   margin: 5px;
   border-radius: 2%;
   background-color: white;
+  p {
+    margin-top: 150px;
+    width: 150px;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+  span {
+    top: 1px;
+    position: relative;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.5s all;
+    opacity: 1;
+  }
 }
 
 .donate-description {
@@ -472,33 +476,20 @@ body {
   margin-left: 15px;
 }
 
-.donate-column p {
-  margin-top: 150px;
-  width: 150px;
-  margin-left: 15px;
-  font-size: 18px;
-}
-
-.donate-column span {
-  top: 1px;
-  position: relative;
-}
-
 .btn-four {
   width: 195px;
   background-color: $span-color;
   border-radius: 0;
 }
 
-.buy {
+.addon {
   background-color: $span-color;
-  opacity: 0.8;
   border-bottom-left-radius: 3%;
   border-bottom-right-radius: 3%;
   margin-bottom: -30px;
 }
 
-.buy .section-title {
+.addon .section-title {
   text-align: left;
   margin-left: 15px;
 }
@@ -507,13 +498,6 @@ body {
   text-align: right;
   position: absolute;
   margin: 10px 0 0 60px;
-}
-
-.buy:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-  transition: 0.5s all;
-  opacity: 1;
 }
 
 /* localizacion */
@@ -527,9 +511,9 @@ body {
 .location-text {
   flex: 1;
   max-width: 60%;
-}
-.location-text h3 {
-  text-align: left;
+  h3 {
+    text-align: left;
+  }
 }
 
 .btn-five {
@@ -560,6 +544,21 @@ body {
   color: white;
 }
 
+/* Footer */
+
+.container-footer {
+  padding: 0 20px;
+}
+
+.footer {
+  li {
+    top: -25px;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  height: 0;
+}
 /* Media */
 
 @media (max-width: 800px) {
@@ -591,7 +590,7 @@ body {
   .btn-two {
     margin: auto;
   }
-  .about-image-two {
+  .companions-image-two {
     order: 1;
   }
   .successes .section-subtitle {

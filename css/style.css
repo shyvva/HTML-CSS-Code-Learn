@@ -51,6 +51,7 @@ body {
 .logo {
   font-family: "Trade Winds";
   text-align: left;
+  height: 0;
 }
 
 .span-color {
@@ -59,8 +60,7 @@ body {
 
 /* Navigation */
 .navigation {
-  padding: 10px 0;
-  height: 100px;
+  height: 55px;
 }
 
 .navigation ul {
@@ -93,6 +93,11 @@ body {
   display: flex;
 }
 
+.splash:hover {
+  opacity: 0.9;
+  transition: 1.5s all;
+}
+
 .splash img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -100,11 +105,6 @@ body {
   position: absolute;
   height: 1250px;
   z-index: -1;
-}
-
-.splash:hover {
-  opacity: 0.9;
-  transition: 2s all;
 }
 
 .splash-inner {
@@ -132,12 +132,12 @@ body {
 
 .splash:hover .page-subtitle {
   opacity: 1;
-  transition: 3s all;
+  transition: 1.5s all;
 }
 
 .splash:hover .page-title {
   opacity: 1;
-  transition: 3s all;
+  transition: 1.5s all;
 }
 
 /* Button Splash */
@@ -257,11 +257,11 @@ body {
   background-color: #c23616;
 }
 
-.about-two {
+.companions-one {
   background-color: #ecf0f1;
 }
 
-.about-image {
+.about-our-comapnions-image {
   -ms-flex: 0 50%;
       flex: 0 50%;
   margin: 10px;
@@ -269,27 +269,27 @@ body {
   position: relative;
 }
 
-.about-text {
-  -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-  margin: 10px;
-  text-align: left;
-  position: relative;
-  max-width: 400px;
-}
-
-.about-image img {
+.about-our-comapnions-image img {
   width: 90%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.about-image-two {
+.about-our-companions-text {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  margin: 10px 30px 0;
+  text-align: left;
+  position: relative;
+  max-width: 400px;
+}
+
+.companions-image-two {
   -ms-flex-order: 2;
       order: 2;
 }
 
-.about-text-two {
+.companions-text-two {
   -ms-flex-order: 1;
       order: 1;
 }
@@ -301,13 +301,7 @@ body {
   opacity: 0;
 }
 
-.about-two:hover .btn-three {
-  opacity: 1;
-  transition: 1.5s all;
-  background-color: #c23616;
-}
-
-.about-three:hover .btn-three {
+.about-our-companions:hover .btn-three {
   opacity: 1;
   transition: 1.5s all;
   background-color: #c23616;
@@ -338,7 +332,7 @@ body {
   color: white;
 }
 
-.about-four img {
+.about-our-ceo img {
   border-radius: 75%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -347,15 +341,15 @@ body {
   opacity: 0.5;
 }
 
-.about-four:hover .about-ceo {
-  opacity: 1;
-  transition: 3s all;
-}
-
-.about-four img:hover {
+.about-our-ceo img:hover {
   opacity: 1;
   transition: 1.5s all;
   cursor: pointer;
+}
+
+.about-our-ceo:hover .about-ceo {
+  opacity: 1;
+  transition: 1.5s all;
 }
 
 /* Our Successes */
@@ -471,6 +465,25 @@ body {
   background-color: white;
 }
 
+.donate-column p {
+  margin-top: 150px;
+  width: 150px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.donate-column span {
+  top: 1px;
+  position: relative;
+}
+
+.donate-column:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: 0.5s all;
+  opacity: 1;
+}
+
 .donate-description {
   opacity: 0.3;
 }
@@ -487,33 +500,20 @@ body {
   margin-left: 15px;
 }
 
-.donate-column p {
-  margin-top: 150px;
-  width: 150px;
-  margin-left: 15px;
-  font-size: 18px;
-}
-
-.donate-column span {
-  top: 1px;
-  position: relative;
-}
-
 .btn-four {
   width: 195px;
   background-color: #c23616;
   border-radius: 0;
 }
 
-.buy {
+.addon {
   background-color: #c23616;
-  opacity: 0.8;
   border-bottom-left-radius: 3%;
   border-bottom-right-radius: 3%;
   margin-bottom: -30px;
 }
 
-.buy .section-title {
+.addon .section-title {
   text-align: left;
   margin-left: 15px;
 }
@@ -522,13 +522,6 @@ body {
   text-align: right;
   position: absolute;
   margin: 10px 0 0 60px;
-}
-
-.buy:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-  transition: 0.5s all;
-  opacity: 1;
 }
 
 /* localizacion */
@@ -576,6 +569,23 @@ body {
   color: white;
 }
 
+/* Footer */
+.container-footer {
+  padding: 0 20px;
+}
+
+.footer {
+  height: 0;
+}
+
+.footer li {
+  top: -25px;
+}
+
+.footer .logo {
+  font-size: 14px;
+}
+
 /* Media */
 @media (max-width: 800px) {
   .gallery {
@@ -606,7 +616,7 @@ body {
   .btn-two {
     margin: auto;
   }
-  .about-image-two {
+  .companions-image-two {
     -ms-flex-order: 1;
         order: 1;
   }
